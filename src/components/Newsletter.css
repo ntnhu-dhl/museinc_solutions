@@ -1,0 +1,104 @@
+.newsletter {
+  background: url('/images/sbu-bg-3.png') center center / cover no-repeat;
+  padding: var(--spacing-5xl) 0;
+}
+
+.newsletter-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4xl);
+  align-items: center;
+}
+
+.newsletter-text {
+  max-width: 500px;
+}
+
+.newsletter-title {
+  font-size: var(--font-size-4xl);
+  color: #ffffff;
+  margin-bottom: var(--spacing-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.newsletter-subtitle {
+  font-size: var(--font-size-lg);
+  color: #ffffff;
+  line-height: var(--line-height-relaxed);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  max-width: 500px;
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: var(--font-size-base);
+  font-family: var(--font-body);
+  transition: all var(--transition-base);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-bottom-color: var(--color-accent-gold);
+}
+
+.newsletter-btn {
+  align-self: flex-start;
+  padding: var(--spacing-md) var(--spacing-3xl);
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.newsletter-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .newsletter {
+    padding: var(--spacing-3xl) var(--spacing-md);
+  }
+
+  .newsletter-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .newsletter-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .newsletter-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+  }
+}

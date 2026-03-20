@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  bstar-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bstar-clone
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - bstar-network
+
+networks:
+  bstar-network:
+    driver: bridge
